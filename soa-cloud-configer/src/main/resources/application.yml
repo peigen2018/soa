@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/peigen2018/soa-config.git
+          search-paths: soa
+          default-label: master
+        #native:
+         # search-locations:  file:///${user.home}/config-repo
+server:
+  port: 8900
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://root:bacon123@${eureka.instance.hostname}:8100/eureka/
