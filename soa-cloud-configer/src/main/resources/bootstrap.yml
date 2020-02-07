@@ -6,10 +6,11 @@ spring:
       server:
         git:
           uri: https://github.com/peigen2018/soa-config.git
-          search-paths: {application}
+          search-paths: "{application}"
           default-label: master
-        #native:
-         # search-locations:  file:///${user.home}/config-repo
+      discovery:
+        service-id: config-server
+        enabled: true
 server:
   port: 8900
 
