@@ -28,6 +28,7 @@ dependencies {
 
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
 
 
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
