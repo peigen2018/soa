@@ -16,3 +16,8 @@ eureka:
     serviceUrl:
       defaultZone: http://root:root@${eureka.instance.hostname}:8100/eureka/
 
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8601/test/auth
+
