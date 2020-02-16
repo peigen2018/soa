@@ -8,6 +8,15 @@ spring:
     user:
       name: root
       password: root
+  boot:
+    admin:
+      client:
+        url: http://localhost:9999
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 eureka:
   instance:

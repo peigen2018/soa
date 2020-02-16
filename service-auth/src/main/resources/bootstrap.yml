@@ -9,6 +9,24 @@ spring:
         service-id: config-server
         enabled: true
 
+    stream:
+      bindings:
+        test-input-channel:
+          destination: message
+          content-type: application/json
+          group: licensingGroup
+      kafka:
+        binder:
+          brokers: http://vm_main:9092
+  boot:
+    admin:
+      client:
+        url: http://localhost:9999
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 eureka:
   instance:
     hostname: localhost

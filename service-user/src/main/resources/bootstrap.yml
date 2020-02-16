@@ -9,6 +9,26 @@ spring:
         service-id: config-server
         enabled: true
 
+    stream:
+      bindings:
+        test-output-channel:
+          destination: message
+          content-type: application/json
+
+      kafka:
+        binder:
+          brokers:  http://vm_main:9092
+  zipkin:
+    base-url: http://192.168.31.200:9411
+  boot:
+    admin:
+      client:
+        url: http://localhost:9999
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 eureka:
   instance:
     hostname: localhost
@@ -20,4 +40,3 @@ security:
   oauth2:
     resource:
       user-info-uri: http://localhost:8601/test/auth
-

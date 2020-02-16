@@ -8,7 +8,15 @@ spring:
       discovery:
         locator:
           enabled: true
-
+  boot:
+    admin:
+      client:
+        url: http://localhost:9999
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 eureka:
   instance:
     hostname: localhost

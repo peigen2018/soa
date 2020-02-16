@@ -4,4 +4,6 @@ include 'soa-cloud-eureka'
 include 'web-gateway'
 include 'service-auth'
 include 'service-user'
+include 'web-zipkin'
+include 'soa-cloud-admin'
 

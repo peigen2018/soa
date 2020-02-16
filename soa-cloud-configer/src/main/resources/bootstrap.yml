@@ -8,9 +8,15 @@ spring:
           uri: https://github.com/peigen2018/soa-config.git
           search-paths: "{application}"
           default-label: master
-      discovery:
-        service-id: config-server
-        enabled: true
+  boot:
+    admin:
+      client:
+        url: http://localhost:9999
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 server:
   port: 8900
 

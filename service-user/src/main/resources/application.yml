@@ -1,3 +1,8 @@
 server:
   port: 8610
 
+signing:
+  key: 123456
+
+logging:
+  level: debug

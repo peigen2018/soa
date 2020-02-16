@@ -18,7 +18,8 @@ public class JWTTokenStoreConfig {
 
     @Bean
     public TokenEnhancer tokenEnhancer() {
-        return new JWTTokenEnhancer();
+        JWTTokenEnhancer jwtTokenEnhancer = new JWTTokenEnhancer();
+        return jwtTokenEnhancer;
     }
 
     @Bean
