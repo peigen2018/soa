@@ -12,17 +12,14 @@ import java.util.Date;
 @Entity
 @Setter
 @Getter
-public class User {
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String password;
-
-    private String userName;
+    private String roleName;
 
     private Date createTime;
 
     private Date updateTime;
-
 }

@@ -14,6 +14,7 @@ import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -25,6 +26,7 @@ import java.util.List;
 @RefreshScope
 public class UserApplication {
     public static void main(String[] args) {
+
         SpringApplication.run(UserApplication.class, args);
     }
 }
